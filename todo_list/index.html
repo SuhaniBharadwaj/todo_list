@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quill — A Quiet Place for Your To-Dos</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero__inner">
+            <div class="hero__copy">
+                <span class="eyebrow">— Daily ritual</span>
+                <h1 class="hero__title">A quiet place<br/>for your to&#8209;dos.</h1>
+                <p class="hero__sub">No accounts. No noise. Your tasks live in this browser, on your terms.</p>
+                <a href="#app" class="cta">
+                    <img src="images/icon-plus.svg" alt="" class="cta__icon" />
+                    Start writing
+                </a>
+            </div>
+            <div class="hero__media">
+                <img src="images/hero.jpg" alt="A calm wooden desk with notebook and coffee" class="hero__img" />
+                <div class="hero__chip">
+                    <img src="images/icon-check.svg" alt="" />
+                    <span>Local-first &middot; saved in your browser</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- APP -->
+    <main class="app" id="app">
+        <section class="panel">
+            <div class="panel__head">
+                <div>
+                    <h2 class="panel__title">Today</h2>
+                    <p class="panel__date" id="todayDate"></p>
+                </div>
+                <div class="stats">
+                    <div class="stat"><span id="statTotal">0</span><small>total</small></div>
+                    <div class="stat stat--accent"><span id="statDone">0</span><small>done</small></div>
+                </div>
+            </div>
+
+            <form class="composer" id="composer" autocomplete="off">
+                <input
+                    id="taskInput"
+                    type="text"
+                    class="composer__input"
+                    placeholder="What needs doing?"
+                    maxlength="200"
+                    required
+                />
+                <button type="submit" class="composer__btn" aria-label="Add task">
+                    <img src="images/icon-plus.svg" alt="" />
+                    <span>Add</span>
+                </button>
+            </form>
+
+            <div class="filters" role="tablist">
+                <button class="filter is-active" data-filter="all" role="tab">All</button>
+                <button class="filter" data-filter="active" role="tab">Active</button>
+                <button class="filter" data-filter="done" role="tab">Done</button>
+                <button class="filter filter--ghost" id="clearDone" type="button">Clear completed</button>
+            </div>
+
+            <ul class="tasks" id="taskList" aria-live="polite"></ul>
+
+            <div class="empty" id="emptyState" hidden>
+                <img src="images/icon-check.svg" alt="" class="empty__icon" />
+                <p>Nothing here yet. Add your first task above.</p>
+            </div>
+        </section>
+
+        <aside class="aside">
+            <h3 class="aside__title">How it works</h3>
+            <ol class="aside__list">
+                <li><strong>Type</strong> a task and press <kbd>Enter</kbd>.</li>
+                <li><strong>Click</strong> the circle to mark it done.</li>
+                <li><strong>Double&#8209;click</strong> the text to edit.</li>
+                <li>Everything is saved in <code>localStorage</code>.</li>
+            </ol>
+            <div class="aside__note">
+                <img src="images/icon-edit.svg" alt="" />
+                <p>Tip: clear the list anytime — your data never leaves this device.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>Built with plain HTML, CSS, and JavaScript. Free to remix.</p>
+    </footer>
+
+    <!-- Task item template -->
+    <template id="taskTemplate">
+        <li class="task">
+            <button class="task__check" aria-label="Toggle complete">
+                <img src="images/icon-check.svg" alt="" />
+            </button>
+            <span class="task__text" tabindex="0"></span>
+            <input class="task__edit" type="text" maxlength="200" hidden />
+            <button class="task__delete" aria-label="Delete task">
+                <img src="images/icon-trash.svg" alt="" />
+            </button>
+        </li>
+    </template>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
