@@ -216,7 +216,7 @@ body {
 .composer__btn img { width: 14px; height: 14px; filter: invert(1); }
 .composer__btn:hover { background: var(--accent); transform: translateY(-1px); }
 
-/* Filters */
+
 .filters {
     display: flex;
     gap: 6px;
