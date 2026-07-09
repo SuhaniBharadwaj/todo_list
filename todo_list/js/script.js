@@ -169,7 +169,7 @@
         });
     }
 
-    // Listeners
+
     els.form.addEventListener("submit", (e) => {
         e.preventDefault();
         addTodo(els.input.value);
@@ -183,7 +183,7 @@
 
     els.clearDone.addEventListener("click", clearCompleted);
 
-    // Init
+
     renderDate();
     render();
 })();
