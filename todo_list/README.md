@@ -1,47 +1,31 @@
-# Quill — A Minimal To-Do Website
+To-Do List Web App
 
-A clean, distraction-free to-do app built with **plain HTML, CSS, and JavaScript**.
-No frameworks, no build step. Just open `index.html` in your browser.
+Overview
 
-## Features
+A simple and interactive task management application that allows users to add, complete, and delete tasks. Tasks are stored using localStorage so that data persists even after refreshing the browser.
 
-- Add, complete, edit (double-click), and delete tasks
-- Filter by All / Active / Done
-- Clear all completed tasks
-- Live counters (total + done)
-- **Persistence via `localStorage`** — your tasks survive a refresh
-- Fully responsive design
+Features
 
-## How to run
+- Add tasks
+- Delete tasks
+- Mark tasks as completed
+- Data persistence using localStorage
+- Responsive user interface
 
-1. Unzip the folder.
-2. Open `index.html` in any modern browser.
+Technologies Used
 
-That's it — no server or installation required.
+- HTML5
+- CSS3
+- JavaScript
 
-## File structure
+Live Demo
 
-```
-quill-todo/
-├── index.html          # Markup
-├── css/
-│   └── style.css       # Styles
-├── js/
-│   └── script.js       # App logic + localStorage
-├── images/
-│   ├── hero.jpg        # Hero banner
-│   ├── favicon.svg
-│   ├── icon-check.svg
-│   ├── icon-plus.svg
-│   ├── icon-edit.svg
-│   └── icon-trash.svg
-└── README.md
-```
+https://suhani-todo-list.netlify.app/
 
-## Customize
+GitHub Repository
 
-- **Colors**: edit the CSS variables at the top of `css/style.css` (`--accent`, `--bg`, etc.)
-- **Storage key**: change `STORAGE_KEY` in `js/script.js`
-- **Hero image**: replace `images/hero.jpg` with your own
+https://github.com/SuhaniBharadwaj/todo_list
 
-Free to remix. Have fun.
+Author
+
+Suhani Bhardwaj
